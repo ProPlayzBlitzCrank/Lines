@@ -1,0 +1,42 @@
+CoordMode, Mouse, Screen
+i = 0
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+
+F1::
+if (i = 0)
+{
+MouseGetPos, x1, y1
+i = 1
+}
+else
+{
+MouseGetPos, x2, y2
+Click, left, %x1%, %y1%, down
+Mousemove, %x2%, %y2%
+Sleep, 100
+Click, left, up
+i = 0
+}
+return
+
+^u::
+MouseMove, 676, 269
+return
+
+^i::
+MouseMove, 0, -15, , R
+return
+
+^j::
+MouseMove, -15, 0, , R
+return
+
+^k::
+MouseMove, 0, 15, , R
+return
+^l::
+MouseMove, 15, 0, , R
+return
